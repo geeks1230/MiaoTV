@@ -41,7 +41,7 @@ const Logo = () => {
   const { siteName } = useSite();
   return (
     <Link
-      href='/'
+      href='https://image.baidu.com/search/down?thumburl=https://baidu.com&url=https://tvax2.sinaimg.cn/large/8eb32d9bgy1i362u1r3lxg20dw02iwgs.gif'
       className='flex items-center justify-center h-16 select-none hover:opacity-80 transition-opacity duration-200'
     >
       <span className='text-2xl font-bold text-green-600 tracking-tight'>
