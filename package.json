@@ -19,7 +19,7 @@
     "gen:version": "node scripts/generate-version.js",
     "postbuild": "echo 'Build completed - sitemap generation disabled'",
     "prepare": "husky install",
-    "pages:build": "npx @cloudflare/next-on-pages --build"
+    "pages:build": "npx @cloudflare/next-on-pages --plugin"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.12",
