@@ -1,0 +1,13 @@
+# Cloudflare Pages 路由配置
+
+# API 代理
+/api/*  https://api.miaotv.xyz/:splat 200
+
+# 静态资源
+/*.html 200
+/*.css  200
+/*.js   200
+/images/*  200
+
+# SPA 重写
+/*    /index.html   200
