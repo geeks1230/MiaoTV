@@ -19,7 +19,7 @@
     "gen:version": "node scripts/generate-version.js",
     "postbuild": "echo Build completed",
     "prepare": "husky install",
-    "pages:build": "next build && npx @cloudflare/next-on-pages"
+    "pages:build": "pnpm install --no-frozen-lockfile && next build && npx @cloudflare/next-on-pages"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.12",
