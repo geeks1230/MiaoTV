@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const nextConfig = {
+  output: 'export',
+  distDir: '.vercel/output/static',
 
   eslint: {
     dirs: ['src'],
