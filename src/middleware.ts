@@ -126,6 +126,7 @@ function shouldSkipAuth(pathname: string): boolean {
     '/logo.png',
     '/screenshot.png',
     '/api/image-proxy',  // 图片代理不需要认证
+    '/proxy',
   ];
 
   return skipPaths.some((path) => pathname.startsWith(path));
@@ -137,3 +138,4 @@ export const config = {
     '/((?!_next/static|_next/image|favicon.ico|login|warning|api/login|api/register|api/logout|api/cron|api/server-config).*)',
   ],
 };
+
