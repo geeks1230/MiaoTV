@@ -55,7 +55,6 @@ export function processImageUrl(originalUrl: string): string {
       );
     case 'custom':
       return `${proxyUrl}${encodeURIComponent(originalUrl)}`;
-    case 'server':
     default:
       return originalUrl;
   }
@@ -231,6 +230,7 @@ export function cleanHtmlTags(text: string): string {
   // 使用 he 库解码 HTML 实体
   return he.decode(cleanedText);
 }
+
 
 
 
