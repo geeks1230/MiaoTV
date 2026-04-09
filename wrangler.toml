@@ -1,0 +1,3 @@
+name = "miaotv"
+compatibility_date = "2023-10-02"
+pages_build_output_dir = ".next"
