@@ -4,7 +4,7 @@ import Hls from 'hls.js';
 
 function getDoubanImageProxyConfig(): {
   proxyType:
-    | 'direct'
+    | 'server'
     | 'server'
     | 'img3'
     | 'cmliussss-cdn-tencent'
@@ -15,7 +15,7 @@ function getDoubanImageProxyConfig(): {
   const doubanImageProxyType =
     localStorage.getItem('doubanImageProxyType') ||
     (window as any).RUNTIME_CONFIG?.DOUBAN_IMAGE_PROXY_TYPE ||
-    'direct';
+    'server';
   const doubanImageProxy =
     localStorage.getItem('doubanImageProxyUrl') ||
     (window as any).RUNTIME_CONFIG?.DOUBAN_IMAGE_PROXY ||
@@ -55,7 +55,7 @@ export function processImageUrl(originalUrl: string): string {
       );
     case 'custom':
       return `${proxyUrl}${encodeURIComponent(originalUrl)}`;
-    case 'direct':
+    case 'server':
     default:
       return originalUrl;
   }
