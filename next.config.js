@@ -71,4 +71,5 @@ const withPWA = require('next-pwa')({
   skipWaiting: true,
 });
 
-module.exports = withPWA(nextConfig);
+const withCloudflare = require('@cloudflare/next-on-pages/nextConfig')({})
+module.exports = withCloudflare(withPWA(nextConfig));
