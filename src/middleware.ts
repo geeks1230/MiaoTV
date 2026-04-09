@@ -127,6 +127,7 @@ function shouldSkipAuth(pathname: string): boolean {
     '/screenshot.png',
     '/api/image-proxy',  // 图片代理不需要认证
     '/proxy',
+    '/proxy',
   ];
 
   return skipPaths.some((path) => pathname.startsWith(path));
@@ -135,7 +136,7 @@ function shouldSkipAuth(pathname: string): boolean {
 // 配置middleware匹配规则
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|login|warning|api/login|api/register|api/logout|api/cron|api/server-config).*)',
+    '/((?!_next/static|_next/image|favicon.ico|login|warning|api/login|api/register|api/logout|api/cron|api/server-config|/proxy).*)',
   ],
 };
 
