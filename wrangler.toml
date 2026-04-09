@@ -1,3 +1,9 @@
 name = "miaotv"
 compatibility_date = "2024-01-01"
-pages_build = { dir = ".vercel/output", binding = "BUILD" }
+
+[build]
+command = "pnpm pages:build"
+cwd = "."
+
+[site]
+bucket = ".vercel/output/static"
