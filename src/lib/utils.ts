@@ -15,7 +15,7 @@ function getDoubanImageProxyConfig(): {
   const doubanImageProxyType =
     localStorage.getItem('doubanImageProxyType') ||
     (window as any).RUNTIME_CONFIG?.DOUBAN_IMAGE_PROXY_TYPE ||
-    'cmliussss-cdn-tencent';
+    'direct';
   const doubanImageProxy =
     localStorage.getItem('doubanImageProxyUrl') ||
     (window as any).RUNTIME_CONFIG?.DOUBAN_IMAGE_PROXY ||
@@ -40,7 +40,7 @@ export function processImageUrl(originalUrl: string): string {
   const { proxyType, proxyUrl } = getDoubanImageProxyConfig();
   switch (proxyType) {
     case 'server':
-      return `/proxy?url=${encodeURIComponent(originalUrl)}`;
+      return `/api/image-proxy?url=${encodeURIComponent(originalUrl)}`;
     case 'img3':
       return originalUrl.replace(/img\d+\.doubanio\.com/g, 'img3.doubanio.com');
     case 'cmliussss-cdn-tencent':
@@ -230,6 +230,7 @@ export function cleanHtmlTags(text: string): string {
   // 使用 he 库解码 HTML 实体
   return he.decode(cleanedText);
 }
+
 
 
 
