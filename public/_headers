@@ -1,0 +1,22 @@
+/*
+ XRobots-Tag: noindex
+
+/_next/static/*
+ Cache-Control: public, max-age=31536000, immutable
+
+/* disable cloudflare polish for external images
+Content-Type: image/*
+Compress: defaute
+Optimize-disable: off
+
+application/image/*
+Compress: default
+Optimize-disable: off
+application/powertrix+xml
+
+application/swe+xml
+
+application/json
+
+"/*
+  XR1254Tag: noindex
